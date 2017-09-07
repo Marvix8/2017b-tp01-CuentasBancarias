@@ -42,7 +42,10 @@ public class TestCuentaBancaria {
 		CuentaBancaria cuentaDestino = new CuentaBancaria();
 		this.cuenta.depositar(3000);
 		cuenta.tansferirHacia(2000,cuentaDestino);
-		Assert.assertEquals(2000, cuentaDestino.getSaldo(),0.00001);		
+		Assert.assertEquals(2000, cuentaDestino.getSaldo(),0.00001);	
+		Assert.assertEquals(1000,this.cuenta.getSaldo(),0.00001);
 	}
+	
+	
 	
 }
