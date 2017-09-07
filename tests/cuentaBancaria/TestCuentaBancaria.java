@@ -46,6 +46,11 @@ public class TestCuentaBancaria {
 		Assert.assertEquals(1000,this.cuenta.getSaldo(),0.00001);
 	}
 	
-	
-	
+	@Test
+	public void transferenciaDeTodoElSaldoDeLaCuenta(){
+		CuentaBancaria cuentaDestino = new CuentaBancaria();
+		this.cuenta.depositar(3000);
+		cuenta.tansferirHacia(3000,cuentaDestino);
+		Assert.assertEquals(3000, cuentaDestino.getSaldo(),0.00001);
+	}
 }
