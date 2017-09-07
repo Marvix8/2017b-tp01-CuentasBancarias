@@ -2,7 +2,11 @@ package cuentaBancaria;
 
 public class CuentaBancaria {
 	
-	private double saldo = 0;
+	private double saldo;
+	
+	public CuentaBancaria(){
+		this.saldo = 0;
+	}
 
 	public double getSaldo(){
 
@@ -15,10 +19,10 @@ public class CuentaBancaria {
 			this.saldo+= nuevoSaldo;
 	}	
 	
-	public void tansferirHacia(final double monto, CuentaBancaria destino) {
+	public void tansferirHacia(final double monto, CuentaBancaria cuentaDestino) {
 		if(this.saldo >= monto) { 
 			this.saldo-=monto;
-			destino.saldo=monto;
+			cuentaDestino.saldo=monto;
 		}
 	}
 }
