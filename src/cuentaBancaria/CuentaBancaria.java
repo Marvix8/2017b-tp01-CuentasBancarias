@@ -10,6 +10,8 @@ public class CuentaBancaria {
 	}
 
 	public void depositar(final double nuevoSaldo) {
-		this.saldo+= nuevoSaldo;
+		
+		if(nuevoSaldo >0)
+			this.saldo+= nuevoSaldo;
 	}	
 }
