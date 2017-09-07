@@ -7,5 +7,9 @@ public class CuentaBancaria {
 	public float getSaldo(){
 
 		return this.saldo;
+	}
+
+	public void depositar(final float nuevoSaldo) {
+		this.saldo= nuevoSaldo;
 	}	
 }
