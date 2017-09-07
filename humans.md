@@ -8,4 +8,4 @@
 ## Estudiantes
 
 * Cristian Castagna ([Marvix8](https://github.com/Marvix8))
-* XXX ([xxx](https://github.com/xxx))
+* Miguel Angel Amengual ([Miguel6](https://github.com/Miguel6))
