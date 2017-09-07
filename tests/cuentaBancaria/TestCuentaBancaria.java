@@ -9,6 +9,13 @@ public class TestCuentaBancaria {
 	public void creacionDeUnaCuentaSinSaldo(){
 		
 		CuentaBancaria cuenta1 = new CuentaBancaria();
-		Assert.assertEquals(0, cuenta1.getSaldo(),0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001);
+		Assert.assertEquals(0, cuenta1.getSaldo(),0.00001);
+	}
+	
+	@Test
+	public void depositarSaldoEnCuenta() {
+		CuentaBancaria cuenta = new CuentaBancaria();
+		cuenta.depositar(2);
+		Assert.assertEquals(2, cuenta.getSaldo(),0.00001);
 	}
 }
