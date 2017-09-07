@@ -2,14 +2,14 @@ package cuentaBancaria;
 
 public class CuentaBancaria {
 	
-	private float saldo = 0;
+	private double saldo = 0;
 
-	public float getSaldo(){
+	public double getSaldo(){
 
 		return this.saldo;
 	}
 
-	public void depositar(final float nuevoSaldo) {
+	public void depositar(final double nuevoSaldo) {
 		this.saldo+= nuevoSaldo;
 	}	
 }
