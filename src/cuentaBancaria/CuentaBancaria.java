@@ -14,4 +14,8 @@ public class CuentaBancaria {
 		if(nuevoSaldo >0)
 			this.saldo+= nuevoSaldo;
 	}	
+	
+	public void tansferirHacia(final double monto, CuentaBancaria destino) {
+		destino.saldo=monto;
+	}
 }
