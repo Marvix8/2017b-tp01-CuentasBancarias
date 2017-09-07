@@ -31,4 +31,11 @@ public class TestCuentaBancaria {
 		Assert.assertEquals(5500, this.cuenta.getSaldo(), 0.00001);		
 	}
 	
+	@Test
+	public void depositoDeSaldoNegativo(){
+		this.cuenta.depositar(7000);
+		this.cuenta.depositar(-5000);
+		Assert.assertEquals(7000, this.cuenta.getSaldo(), 0.00001);		
+	}
+	
 }
