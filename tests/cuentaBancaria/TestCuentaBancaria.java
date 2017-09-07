@@ -53,4 +53,15 @@ public class TestCuentaBancaria {
 		cuenta.tansferirHacia(3000,cuentaDestino);
 		Assert.assertEquals(3000, cuentaDestino.getSaldo(),0.00001);
 	}
+	
+	@Test
+	public void trasferenciaMontoNegativo() {
+		CuentaBancaria cuentaDestino = new CuentaBancaria();
+		this.cuenta.depositar(3000);
+		cuentaDestino.depositar(2000);
+		cuenta.tansferirHacia(-2000,cuentaDestino);
+		Assert.assertEquals(3000, this.cuenta.getSaldo(),0.00001);
+		Assert.assertEquals(2000, cuentaDestino.getSaldo(),0.00001);
+		
+	}
 }
