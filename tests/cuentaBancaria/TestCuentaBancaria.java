@@ -7,7 +7,7 @@ import org.junit.Test;
 public class TestCuentaBancaria {
 	
 	private CuentaBancaria cuenta;
-	
+
 	@Before
 	public void crearCuentaBancaria() {
 		this.cuenta=new CuentaBancaria();
@@ -36,6 +36,13 @@ public class TestCuentaBancaria {
 		this.cuenta.depositar(7000);
 		this.cuenta.depositar(-5000);
 		Assert.assertEquals(7000, this.cuenta.getSaldo(), 0.00001);		
+	}
+	@Test
+	public void tranferenciaDeSaldo() {
+		CuentaBancaria cuentaDestino = new CuentaBancaria();
+		cuenta.tansferirHacia(2000,cuentaDestino);
+		Assert.assertEquals(2000, cuentaDestino.getSaldo(),0.00001);
+		
 	}
 	
 }
