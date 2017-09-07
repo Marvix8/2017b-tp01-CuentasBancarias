@@ -10,6 +10,6 @@ public class CuentaBancaria {
 	}
 
 	public void depositar(final float nuevoSaldo) {
-		this.saldo= nuevoSaldo;
+		this.saldo+= nuevoSaldo;
 	}	
 }
